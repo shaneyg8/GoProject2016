@@ -38,7 +38,7 @@
 	<div class="container">
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" id="userinput" placeholder="Date">
+          <input type="text" class="form-control" id="date" placeholder="Date">
         </div>
       </form>
     </div>
@@ -46,7 +46,7 @@
     <div class="container">
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" id="userinput" placeholder="TODO">
+          <input type="text" class="form-control" id="todo" placeholder="TODO">
         </div>
       </form>
     </div>
@@ -55,7 +55,9 @@
       <form>
         <div class="button">
 		<center>
-          <button type="button" width = "10px" height = "10px">Save</button>
+            <form id="upload" action="/" method="POST" enctype="multipart/form-data">
+                <input id="sendText" type="submit" value="Save" /><br>
+            </form>
 		  <center/>
         </div>
       </form>
