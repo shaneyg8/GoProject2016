@@ -12,7 +12,7 @@ import (
 type List struct {
  	ID       bson.ObjectId `bson:"_id,omitempty"`
  	Date    string
-    ToDo    string
+    	ToDo    string
  }
 func main() {
 	m := macaron.Classic()
@@ -22,26 +22,27 @@ func main() {
 }
 
 func save(req *http.Request) {
-	//fmt.Println("Uploadhandler start")
+	fmt.Println("Uploadhandler start")
 	session, err := mgo.Dial("127.0.0.1:27017")
 	if err != nil {
 		panic(err)
 	}
 
 	defer session.Close()
-    req.ParseForm()
-    date := req.FormValue("date")
-    todo := req.FormValue("todo")
-	//Check if there is an error
+
+	err = req.ParseForm()
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
+    	date := req.FormValue("date")
+    	todo := req.FormValue("todo")
     
     // Collection
  	c := session.DB("Todo").C("List")
  
  	// Insert
  	err = c.Insert(&List{Date: date, ToDo: todo})
+	
     if err != nil {
         panic(err)
     }
