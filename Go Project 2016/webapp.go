@@ -12,23 +12,34 @@ import (
 type List struct {
  	ID       bson.ObjectId `bson:"_id,omitempty"`
  	Date    string
-    	ToDo    string
+    ToDo    string
  }
+ 
+ type ListTodo struct{
+		ListStr	string		`json:"liststr" bson:"liststr"`
+ }
+ 
 func main() {
 	m := macaron.Classic()
 	m.Use(macaron.Renderer())
 	m.Post("/", save)
+	m.Get("/Todo", func(ctx *macaron.Context){
+		ctx.Data["List"] = search
+		ctx.HTML(303, "Todo")
+	})
 	m.Run(4000)
 }
 
-func save(req *http.Request) {
+func save(w http.ResponseWriter, req *http.Request)string {
 	fmt.Println("Uploadhandler start")
 	session, err := mgo.Dial("127.0.0.1:27017")
 	if err != nil {
 		panic(err)
 	}
+	
 
 	defer session.Close()
+	
 
 	err = req.ParseForm()
 	if err != nil {
@@ -46,5 +57,30 @@ func save(req *http.Request) {
     if err != nil {
         panic(err)
     }
+	response:="test"
+	http.Redirect(w, req, "/Todo", 303)
+	return response
 	
+}
+
+func search(w http.ResponseWriter, req *http.Request)[]string {
+
+	session, err := mgo.Dial("127.0.0.1:27017")
+	if err != nil {
+		panic(err)
+	}
+	
+
+	defer session.Close()
+	
+	// Collection
+ 	db := session.DB("Todo")
+	c := db.C("List")
+	var list []string
+	err = c.Find(bson.M{"Date": 0, "ToDo": 0}).All(&list)
+	
+    if err != nil {
+        panic(err)
+    }
+	return list
 }
