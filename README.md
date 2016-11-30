@@ -2,7 +2,7 @@
 ## Abstract
 A simple ToDo List web application using Golang and HTML. In this application you will be given two text boxes where you enter a Date and the other text box will be used to enter your activity you want to do. This information will be then posted to a mongodb to store your information and then retrieved to show you what you your activities you are about to do. 
 
-##Lifecycle
+##Project Planning
 As part of this Go Project it originally was designed as a group project but with regards differences between myself and my working colleague I decided to do the project by myself.
 
 -> As part of my brainstorming I had come up with a few ideas to do for a project and wanted to produce something that could improve my knowledge on the Go programming language as well as using another Database other than MySQL
