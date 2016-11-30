@@ -104,6 +104,7 @@ Bootstrap's package.json contains some additional metadata under the following k
         ├── glyphicons-halflings-regular.woff
         └── glyphicons-halflings-regular.woff2
 ```
+"
 ## MongoDB -Backend
 ![MongoDBLogo](https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/640px-MongoDB-Logo.svg.png)
 
@@ -119,36 +120,6 @@ Bootstrap's package.json contains some additional metadata under the following k
 ### My Web Application
 
 As I have never used mongoDB before I felt like this was a new challenge. Having already worked with MySQL I wanted to see what was so different to it. With my web application I wanted to use a database so I could POST and GET data. As it was a ToDo List all I wanted to incorporate in this project was two text boxes which would be all that you would need, a date you wanted to do the activity and another text box to input your activity, this would then be POSTing data to my Mongo database through the save button. The POST and GET functions are set up through the GoLang which can be seen on my source code. 
-
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @shaneyg8
- Unwatch 2
-  Star 0
-  Fork 0 shaneyg8/GoProject2016
- Code  Issues 0  Pull requests 0  Projects 1  Wiki  Pulse  Graphs  Settings
- Delete Page Page History New Page
-Editing 5 . Project Architecture
- 
-5 . Project Architecture
-Write  Preview
-h1 h2 h3      B i        Edit mode:  
-Block Elements
-Span Elements
-Miscellaneous
-Paragraphs & Breaks
-Headers
-Blockquotes
-Lists
-Code Blocks
-Horizontal Rules
-To create a paragraph, simply create a block of text that is not separated by one or more blank lines. Blocks of text separated by one or more blank lines will be parsed as paragraphs.
-
-If you want to create a line break, end a line with two or more spaces, then hit Return/Enter.
 
 
 # Project Architecture
