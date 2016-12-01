@@ -1,9 +1,11 @@
 # Go-Project-2016
-## ![WIKI LINK FOR IN DEPTH DOCUMENTATION](https://github.com/shaneyg8/GoProject2016/wiki)
+## Shane Gleeson - G00311793
+## [WIKI LINK FOR IN DEPTH DOCUMENTATION](https://github.com/shaneyg8/GoProject2016/wiki)
+
 ## Abstract
 A simple ToDo List web application using Golang and HTML. In this application you will be given two text boxes where you enter a Date and the other text box will be used to enter your activity you want to do. This information will be then posted to a mongodb to store your information and then retrieved to show you what you your activities you are about to do. 
 
-## ![PROJECT INSTRUCTIONS ON HOW TO RUN](https://github.com/shaneyg8/GoProject2016/blob/master/Go%20Project%202016/README.md)
+## [PROJECT INSTRUCTIONS ON HOW TO RUN](https://github.com/shaneyg8/GoProject2016/blob/master/Go%20Project%202016/README.md)
 
 ##Project Planning
 As part of this Go Project it originally was designed as a group project but with regards differences between myself and my working colleague I decided to do the project by myself.
