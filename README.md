@@ -62,3 +62,11 @@ As I have never used mongoDB before I felt like this was a new challenge. Having
 [![Architecture.png](https://s21.postimg.org/yn3avt20n/Architecture.png)](https://postimg.org/image/rjvfg6wkz/)
 
 This application is written in GoLang using the Macaron Framework.The backend technology used is MongoDB and is ran locally. This application using GoLang POSTs and retrieves data with the GET method through the service layer(GoLang). The Front End/ Client Side is done through HTML5 and Bootstrap. 
+
+
+#References
+[Mongo Website](https://www.mongodb.com/)
+[MGO website](https://labix.org/mgo)
+[Macaron Website](https://go-macaron.com/)
+[Bootstrap Website](http://getbootstrap.com/)
+[GoLang Website](https://golang.org/)
